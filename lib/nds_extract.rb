@@ -1,4 +1,5 @@
 require 'directors_database'
+require 'pp'
 
 # Write a method that, given an NDS creates a new Hash
 # The return value should be like:
@@ -24,5 +25,5 @@ def gross_for_director(director_data)
   while index < director_data[:movies][i][:worldwide_gross]
   i += 1
 end
-total
+pp total
 end
