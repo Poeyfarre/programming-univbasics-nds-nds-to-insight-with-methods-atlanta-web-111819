@@ -11,7 +11,9 @@ def directors_totals(nds)
   while dir_index < nds.length do
     director = nds[dir_index]
     total[director[:name]] = gross_for_director
+    dir_index += 1
 end
+total
 end
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
