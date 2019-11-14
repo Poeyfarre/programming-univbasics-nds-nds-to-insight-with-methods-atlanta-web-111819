@@ -10,10 +10,18 @@ def directors_totals(nds)
   result = {}
   row_index = 0
   while row_index < nds.length do
-    director = nds[row_index].length
-    result[director[:name]] = gross_for_director(director)
-    row_index += 1
- 
+    director = nds[row_index][:name]
+    movies = nds[row_index][:movies]
+    movies_index = 0 
+    money = 0 
+    
+    while movies_index < movies.length do
+      some_money = movies[movies_index][:worldwide_gross]
+      money += some_money
+      movies_index += 1 
+  end
+  result[director] = money
+  row_index += 1 
 end
 result
 end
