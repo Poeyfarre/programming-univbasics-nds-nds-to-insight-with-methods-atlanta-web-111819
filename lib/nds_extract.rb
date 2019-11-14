@@ -8,7 +8,9 @@ require 'pp'
 
 def directors_totals(nds)
   result = {}
-  dir_index = 0
+  row_index = 0
+  while row_index < nds.length do
+    column_index = 0 
   while dir_index < nds.length do
     director = nds[dir_index]
     total[director[:name]] = gross_for_director(director)
